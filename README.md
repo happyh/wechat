@@ -342,7 +342,7 @@ Url	：点击图文消息跳转链接
 以下是一个创建二级菜单的例子
 
 ```go
-mu := wc.GetMenu(c.Request, c.Writer)
+mu := wc.GetMenu()
 
 buttons := make([]*menu.Button, 1)
 btn := new(menu.Button)
