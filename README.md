@@ -335,7 +335,7 @@ Url	：点击图文消息跳转链接
 
 ## 自定义菜单
 
-通过` wechat.GetMenu(req, writer)`获取menu的实例
+通过` wechat.GetMenu()`获取menu的实例
 
 ### 自定义菜单创建接口
 
@@ -402,7 +402,7 @@ func (btn *Button) SetViewLimitedButton(name, mediaID string) {
 ### 自定义菜单查询接口
 
 ```go
-mu := wc.GetMenu(c.Request, c.Writer)
+mu := wc.GetMenu()
 resMenu,err:=mu.GetMenu()
 ```
 >返回结果 resMenu 结构参考 ./menu/menu.go 中ResMenu 结构体
@@ -410,7 +410,7 @@ resMenu,err:=mu.GetMenu()
 ### 自定义菜单删除接口
 
 ```go
-mu := wc.GetMenu(c.Request, c.Writer)
+mu := wc.GetMenu()
 err:=mu.DeleteMenu()
 ```
 
